@@ -5,12 +5,12 @@
   */
 int main(void)
 {
-	int num = 0;
+int num;
 while (num <= 9)
 {
-printf(num);
+printf("%d", num);
 num++;
 }
-printf('\n');
+printf("\n");
 return (0);
 }
