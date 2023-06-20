@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * _absolute - computes absolute numbers
+ * _abs - computes absolute numbers
  * @c: the charc to be checked
  * Return: Absolute value of number 0
  */
-int _absolute(int c)
+int _abs(int c)
 {
 if (c < 0)
 {
