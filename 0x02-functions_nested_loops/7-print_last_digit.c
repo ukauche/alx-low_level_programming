@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * print_lastdigit - Print last number
+ * print_last_digit - Prints the last digit of a number
  * @n: The variable assinged
- * Return: Value of last number
+ * Return: Value of the last digit of number
  */
-int print_lastdigit(int n)
+int print_last_digit(int n)
 
 {
 int last;
@@ -17,3 +17,4 @@ last = last * -1;
 
 _putchar(last + '0');
 return (last);
+}
