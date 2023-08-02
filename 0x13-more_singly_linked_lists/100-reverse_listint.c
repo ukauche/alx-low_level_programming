@@ -9,18 +9,18 @@
 
 listint_t *reverse_listint(listint_t **head)
 {
-	listint_t *former = NULL;
-	listint_t *link = NULL;
+	listint_t *prev = NULL;
+	listint_t *next = NULL;
 
 	while (*head != NULL)
 	{
-		link = (*head)->link;
-		(*head)->link = former;
-		former = *head;
-		*head = link;
+		next = (*head)->next;
+		(*head)->next = prev;
+		prev = *head;
+		*head = next;
 	}
 
-	*head = former;
+	*head = prev;
 
 	return (*head);
 }
