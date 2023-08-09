@@ -4,13 +4,13 @@ char *create_buffer(char *file);
 void close_file(int fd);
 
 /**
- * buffer - Allocates 1024 bytes for a buffer.
+ * create_buffer - Allocates 1024 bytes for a buffer.
  * @file: The name of the file buffer is storing chars for.
  *
  * Return: A pointer to the newly-allocated buffer.
  */
 
-char *buffer(char *file)
+char *create_buffer(char *file)
 {
 	char *fp;
 
@@ -18,8 +18,7 @@ char *buffer(char *file)
 
 	if (fp == NULL)
 	{
-		dprintf(STDERR_FILENO,
-			"Error: Can't write to %s\n", file);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file);
 		exit(99);
 	}
 
