@@ -1,7 +1,7 @@
 #include "main.h"
 
-char *buffer(char *file);
-void close_file_des(int fd);
+char *create_buffer(char *file);
+void close_file(int fd);
 
 /**
  * buffer - Allocates 1024 bytes for a buffer.
@@ -27,10 +27,10 @@ char *buffer(char *file)
 }
 
 /**
- * close_file_des - Closes file descriptors.
+ * close_file - Closes file descriptors.
  * @fd: File descriptor to be closed.
  */
-void close_file_des(int fd)
+void close_file(int fd)
 {
 	int x;
 
@@ -67,7 +67,7 @@ int main(int argc, char *argv[])
 		exit(97);
 	}
 
-	fp = buffer(argv[2]);
+	fp = create_buffer(argv[2]);
 	from = open(argv[1], O_RDONLY);
 	x = read(from, fp, 1024);
 	to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
